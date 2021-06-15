@@ -1,0 +1,23 @@
+extends index
+block partials
+    body
+
+        h1 Vista de Productos
+        br
+        if hayProductos 
+            .table-responsive
+            table.table.table-dark
+            tr
+            th Nombre
+            th Precio
+            th Foto
+            each val in productos
+                tr
+                td= val.title
+                td= val.price
+                td "src":'image.png') 
+
+                      
+      
+        else  
+        h3.alert.alert-warning No se encontraron productos

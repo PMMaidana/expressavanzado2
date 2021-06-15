@@ -18,6 +18,10 @@ class Productos {
         let posicionId = someId - 1
         this.productos.splice(posicionId, 0, {title, price, thumbnail,  id: someId})
     }
+
+    hayProductos(){
+        return this.productos.length > 0;
+    }
     
     generateID(){
         return ++this.lastId
